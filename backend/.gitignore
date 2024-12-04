@@ -11,7 +11,7 @@ yarn-error.log*
 .env.* 
 
 # Build outputs
-/dist/
+
 /build/
 
 /coverage/    # If you use a code coverage tool
