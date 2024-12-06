@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
     //       return;
     //     }
     //   }
- const response = await axios.post("http://localhost:5000/api/auth/login", {
+ const response = await axios.post("https://eventdashboard.onrender.com/api/auth/login", {
         username: formData.username,
         password: formData.password,
         role: formData.role,
@@ -116,7 +116,7 @@ const handleSubmit = async (e) => {
         <p className="text-center mt-4">
           Dont Have an account?{" "}
           <a href="/signup" className="text-blue-500 hover:underline">
-            Sign In
+            Sign Up
           </a>
         </p>
         </form>

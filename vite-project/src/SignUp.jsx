@@ -27,7 +27,7 @@ const SignUpPage = () => {
 
     try {
       // Send a POST request to your backend to create a new user
-      const response = await axios.post("http://localhost:5000/api/auth/signup", {
+      const response = await axios.post("https://eventdashboard.onrender.com/api/auth/signup", {
         username,
         password,
         role,
