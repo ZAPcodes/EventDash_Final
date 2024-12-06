@@ -22,7 +22,7 @@ export default function AdminDashboard() {
     const fetchEvents = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://localhost:5000/api/events", {
+        const response = await axios.get("https://eventdashboard.onrender.com/api/events", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -51,7 +51,7 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        "http://localhost:5000/api/events",
+        "https://eventdashboard.onrender.com/api/events",
         { ...form },
         {
           headers: {
@@ -73,7 +73,7 @@ export default function AdminDashboard() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:5000/api/events/${currentEvent._id}`,
+        `https://eventdashboard.onrender.com/api/events/${currentEvent._id}`,
         { ...form },
         {
           headers: {
@@ -99,7 +99,7 @@ export default function AdminDashboard() {
   const handleDeleteEvent = async (id) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/events/${id}`, {
+      await axios.delete(`https://eventdashboard.onrender.com/api/events/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",

@@ -12,7 +12,7 @@ export default function EventDashboard() {
     const fetchEvents = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get(`http://localhost:5000/api/events/${id}`, {
+        const response = await axios.get(`https://eventdashboard.onrender.com/api/events/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export default function EventDashboard() {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.get(
-        `http://localhost:5000/api/events/${eventId}`,
+        `https://eventdashboard.onrender.com/api/events/${eventId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
