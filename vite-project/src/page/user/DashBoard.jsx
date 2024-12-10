@@ -142,7 +142,7 @@ export default function AdminDashboard() {
             </h1>
             <p className="text-gray-600 mt-2">Manage and explore your events</p>
           </div>
-          <button
+{/*           <button
             onClick={() => {
               setShowForm(!showForm);
               setIsEditing(false);
@@ -152,7 +152,7 @@ export default function AdminDashboard() {
           >
             <Plus className="w-5 h-5" />
             Add Event
-          </button>
+          </button> */}
         </div>
 
         {/* Error Message */}
