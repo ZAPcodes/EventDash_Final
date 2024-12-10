@@ -22,7 +22,7 @@ export default function AdminDashboard() {
     const fetchEvents = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("hhttps://eventdashboard.onrender.com/api/events", {
+        const response = await axios.get("https://eventdashboard.onrender.com/api/events", {
           headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
