@@ -5,7 +5,7 @@ import { JWT_SECRET } from '../utils/constants.js';
 
 const login = async (req, res) => {
   try {
-    const { username, password } = req.body;
+    const { username, password, role} = req.body;
 
     // Check if the user exists
     const user = await User.findOne({ username });
@@ -17,6 +17,11 @@ const login = async (req, res) => {
     const isPasswordValid = await bcrypt.compare(password, user.password);
     if (!isPasswordValid) {
       return res.status(401).json({ message: 'Invalid username or password' });
+    }
+
+    const isRole = await compare(role,user.role);
+    if(!isRole){
+      return res.status(401).json({ message: 'Invalid role' });
     }
 
     // Create a token
