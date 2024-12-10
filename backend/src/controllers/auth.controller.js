@@ -19,9 +19,8 @@ const login = async (req, res) => {
       return res.status(401).json({ message: 'Invalid username or password' });
     }
 
-    const isRole = await compare(role,user.role);
-    if(!isRole){
-      return res.status(401).json({ message: 'Invalid role' });
+    if (role !== user.role) {
+      return res.status(401).json({ success: false, message: 'Invalid role' });
     }
 
     // Create a token
